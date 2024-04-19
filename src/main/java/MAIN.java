@@ -7,7 +7,8 @@ import NumerosNaturales.Numerosnaturales;
 import CONTARDIGITOS.ContadorDeDigitos;
 import POTENCIA.Potencia;
 import MAXIMO.Maximo;
-import HEXADECIMALDECIMAL.HexadecimalADecimal;  // Importar la clase HexadecimalADecimal
+import HEXADECIMALDECIMAL.HexadecimalADecimal;
+import ADN.Adn;  // Importar la clase ADN
 
 public class MAIN extends JFrame {
     JPanel panel;
@@ -19,7 +20,7 @@ public class MAIN extends JFrame {
 
         panel = new JPanel();
 
-        String[] opciones = {"Seleccione una opción", "Suma de Numeros n", "Imprimir Numeros Naturales", "Contar Dígitos", "Calcular Potencia", "Calcular Máximo", "Convertir Hexadecimal a Decimal", "Opción 7"};  // Añadir "Convertir Hexadecimal a Decimal"
+        String[] opciones = {"Seleccione una opción", "Suma de Numeros n", "Imprimir Numeros Naturales", "Contar Dígitos", "Calcular Potencia", "Calcular Máximo", "Convertir Hexadecimal a Decimal", "Generar y contar genes en ADN", "Opción 8"};  // Añadir "Generar y contar genes en ADN"
         JComboBox<String> comboBox = new JComboBox<>(opciones);
 
         textArea = new JTextArea(10, 30);
@@ -44,10 +45,14 @@ public class MAIN extends JFrame {
                 int[] vector = {1, 2, 3, 4, 5};
                 String maximo = Maximo.calcularMaximo(vector, 0);
                 textArea.setText(maximo);
-            } else if (seleccionado.equals("Convertir Hexadecimal a Decimal")) {  // Añadir este caso
+            } else if (seleccionado.equals("Convertir Hexadecimal a Decimal")) {
                 String hex = "A1B2";
                 int decimal = HexadecimalADecimal.convertirHexadecimalADecimal(hex, hex.length());
                 textArea.setText("El valor decimal de " + hex + " es: " + decimal);
+            } else if (seleccionado.equals("Generar y contar genes en ADN")) {  // Añadir este caso
+                String cadenaADN = Adn.generarCadenaADN();
+                int numeroGenes = Adn.contarGenes(cadenaADN);
+                textArea.setText("Cadena de ADN generada: " + cadenaADN + "\nNúmero de genes en la cadena de ADN: " + numeroGenes);
             }
         });
 
