@@ -1,17 +1,15 @@
 package NumerosNaturales;
 
+import javax.swing.JTextArea;
+
 public class Numerosnaturales {
-    public static void imprimirNumeros(int a, int d) {
+    public static void imprimirNumeros(int a, int d, JTextArea textArea) {
         if (a > d) {
             return;
         }
 
-        System.out.println(a);
+        textArea.append(a + "\n");
 
-        imprimirNumeros(a + 1, d);
-    }
-
-    public static void main(String[] args) {
-        imprimirNumeros(5, 10);
+        imprimirNumeros(a + 1, d, textArea);
     }
 }
