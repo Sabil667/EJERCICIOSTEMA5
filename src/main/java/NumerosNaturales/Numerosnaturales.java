@@ -1,15 +1,15 @@
 package NumerosNaturales;
 
 import javax.swing.JTextArea;
+import java.io.PrintStream;
 
 public class Numerosnaturales {
-    public static void imprimirNumeros(int a, int d, JTextArea textArea) {
-        if (a > d) {
-            return;
+    public static void imprimirNumeros(int inicio, int fin, JTextArea textArea) {
+        for (int i = inicio; i <= fin; i++) {
+            textArea.append(i + "\n");
         }
+    }
 
-        textArea.append(a + "\n");
-
-        imprimirNumeros(a + 1, d, textArea);
+    public static void imprimirNumeros(int inicio, int fin, PrintStream out) {
     }
 }

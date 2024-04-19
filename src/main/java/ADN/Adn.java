@@ -6,14 +6,18 @@ public class Adn {
     private static final String[] BASES = {"A", "T", "G", "C"};
     private static final String[] FIN_GEN = {"TAA", "TAG", "TGA"};
     private static final String INICIO_GEN = "ATG";
-    private static final int LONGITUD_CADENA = 1000;
 
-    public static String generarCadenaADN() {
+    public static String generarCadenaADN(int longitud) {
         Random random = new Random();
-        StringBuilder cadenaADN = new StringBuilder(LONGITUD_CADENA);
-        for (int i = 0; i < LONGITUD_CADENA; i++) {
+        StringBuilder cadenaADN = new StringBuilder(longitud);
+        for (int i = 0; i < longitud; i++) {
             cadenaADN.append(BASES[random.nextInt(BASES.length)]);
         }
+        // Aseguramos que al menos un gen esté presente en la cadena de ADN
+        int inicioGen = random.nextInt(longitud - 3);
+        cadenaADN.replace(inicioGen, inicioGen + 3, INICIO_GEN);
+        int finGen = random.nextInt(longitud - inicioGen - 3) + inicioGen + 3;
+        cadenaADN.replace(finGen, finGen + 3, FIN_GEN[random.nextInt(FIN_GEN.length)]);
         return cadenaADN.toString();
     }
 
@@ -31,12 +35,5 @@ public class Adn {
             inicio = cadenaADN.indexOf(INICIO_GEN, inicio + 1);
         }
         return contadorGenes;
-    }
-
-    public static void main(String[] args) {
-        String cadenaADN = generarCadenaADN();
-        int numeroGenes = contarGenes(cadenaADN);
-        System.out.println("Cadena de ADN generada: " + cadenaADN);
-        System.out.println("Número de genes en la cadena de ADN: " + numeroGenes);
     }
 }
