@@ -6,29 +6,24 @@ import SumaNumerosN.NumerosN;
 import NumerosNaturales.Numerosnaturales;
 import CONTARDIGITOS.ContadorDeDigitos;
 import POTENCIA.Potencia;
-import MAXIMO.Maximo;  // Importar la clase Maximo
+import MAXIMO.Maximo;
 
 public class MAIN extends JFrame {
     JPanel panel;
     JTextArea textArea;
 
     public MAIN() {
-        // Configurar la ventana
         setSize(400, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        // Crear un panel
         panel = new JPanel();
 
-        // Crear un JComboBox
-        String[] opciones = {"Seleccione una opción", "Suma de Numeros n", "Imprimir Numeros Naturales", "Contar Dígitos", "Calcular Potencia", "Calcular Máximo", "Opción 6"};  // Añadir "Calcular Máximo"
+        String[] opciones = {"Seleccione una opción", "Suma de Numeros n", "Imprimir Numeros Naturales", "Contar Dígitos", "Calcular Potencia", "Calcular Máximo", "Opción 6"};
         JComboBox<String> comboBox = new JComboBox<>(opciones);
 
-        // Crear un JTextArea para mostrar los números
         textArea = new JTextArea(10, 30);
         textArea.setEditable(false);
 
-        // Agregar un ActionListener al JComboBox
         comboBox.addActionListener(e -> {
             JComboBox cb = (JComboBox)e.getSource();
             String seleccionado = (String)cb.getSelectedItem();
@@ -44,21 +39,18 @@ public class MAIN extends JFrame {
             } else if (seleccionado.equals("Calcular Potencia")) {
                 int resultado = Potencia.calcularPotencia(2, 3);
                 textArea.setText("2 elevado a 3 es: " + resultado);
-            } else if (seleccionado.equals("Calcular Máximo")) {  // Añadir este caso
+            } else if (seleccionado.equals("Calcular Máximo")) {
                 int[] vector = {1, 2, 3, 4, 5};
-                int maximo = Maximo.calcularMaximo(vector, 0);
-                textArea.setText("El valor máximo del vector es: " + maximo);
+                String maximo = Maximo.calcularMaximo(vector, 0);
+                textArea.setText(maximo);
             }
         });
 
-        // Agregar el JComboBox y JTextArea al panel
         panel.add(comboBox);
         panel.add(textArea);
 
-        // Agregar el panel a la ventana
         add(panel);
 
-        // Hacer visible la ventana
         setVisible(true);
     }
 
