@@ -3,6 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.util.List;
 
 public class MAIN {
     public static void main(String[] args) {
@@ -15,9 +16,12 @@ public class MAIN {
         frame.add(scrollPane);
 
         // Crear un JComboBox
-        String[] opciones = {"Generar cadena de ADN y contar genes", "Ordenar documentos", "Buscar texto"};
+        String[] opciones = {"Generar cadena de ADN y contar genes", "Ordenar documentos", "Buscar texto", "Agregar fecha", "Listar fechas"};
         JComboBox<String> comboBox = new JComboBox<>(opciones);
         frame.add(comboBox, BorderLayout.NORTH);
+
+        // Crear una instancia de GestionFechas
+        GestionFechas gestionFechas = new GestionFechas();
 
         // Agregar un ActionListener al JComboBox
         comboBox.addActionListener(new ActionListener() {
@@ -49,6 +53,16 @@ public class MAIN {
                             boolean encontradoLineal = buscador.busquedaLineal(palabraBusqueda);
                             boolean encontradoBinario = buscador.busquedaBinaria(palabraBusqueda);
                             textArea.append("Resultado de la búsqueda lineal: " + encontradoLineal + "\nResultado de la búsqueda binaria: " + encontradoBinario + "\n");
+                        }
+                        break;
+                    case "Agregar fecha":
+                        String fecha = JOptionPane.showInputDialog("Introduce una fecha en el formato dd/MM/yyyy:");
+                        gestionFechas.agregarFecha(fecha);
+                        break;
+                    case "Listar fechas":
+                        List<String> fechasOrdenadas = gestionFechas.obtenerFechasOrdenadas();
+                        for (String fechaOrdenada : fechasOrdenadas) {
+                            textArea.append(fechaOrdenada + "\n");
                         }
                         break;
                 }
