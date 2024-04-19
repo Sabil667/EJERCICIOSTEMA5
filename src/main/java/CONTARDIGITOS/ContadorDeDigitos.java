@@ -8,8 +8,4 @@ public class ContadorDeDigitos {
             return 1 + contarDigitos(n / 10);
         }
     }
-
-    public static void main(String[] args) {
-        System.out.println(contarDigitos(12345));  // Debería imprimir 5
-    }
 }

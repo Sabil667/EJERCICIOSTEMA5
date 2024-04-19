@@ -4,6 +4,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import SumaNumerosN.NumerosN;
 import NumerosNaturales.Numerosnaturales;
+import CONTARDIGITOS.ContadorDeDigitos;
 
 public class MAIN extends JFrame {
     JPanel panel;
@@ -18,7 +19,7 @@ public class MAIN extends JFrame {
         panel = new JPanel();
 
         // Crear un JComboBox
-        String[] opciones = {"Seleccione una opción", "Suma de Numeros n", "Imprimir Numeros Naturales", "Opción 3"};
+        String[] opciones = {"Seleccione una opción", "Suma de Numeros n", "Imprimir Numeros Naturales", "Contar Dígitos", "Opción 4"};
         JComboBox<String> comboBox = new JComboBox<>(opciones);
 
         // Crear un JTextArea para mostrar los números
@@ -35,6 +36,9 @@ public class MAIN extends JFrame {
             } else if (seleccionado.equals("Imprimir Numeros Naturales")) {
                 textArea.setText("");
                 Numerosnaturales.imprimirNumeros(1, 10, textArea);
+            } else if (seleccionado.equals("Contar Dígitos")) {
+                int cantidad = ContadorDeDigitos.contarDigitos(12345);
+                textArea.setText("La cantidad de dígitos de 12345 es: " + cantidad);
             }
         });
 
