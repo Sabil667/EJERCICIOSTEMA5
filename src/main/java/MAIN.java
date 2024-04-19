@@ -5,6 +5,7 @@ import javax.swing.JTextArea;
 import SumaNumerosN.NumerosN;
 import NumerosNaturales.Numerosnaturales;
 import CONTARDIGITOS.ContadorDeDigitos;
+import POTENCIA.Potencia;  // Importar la clase Potencia
 
 public class MAIN extends JFrame {
     JPanel panel;
@@ -19,7 +20,7 @@ public class MAIN extends JFrame {
         panel = new JPanel();
 
         // Crear un JComboBox
-        String[] opciones = {"Seleccione una opción", "Suma de Numeros n", "Imprimir Numeros Naturales", "Contar Dígitos", "Opción 4"};
+        String[] opciones = {"Seleccione una opción", "Suma de Numeros n", "Imprimir Numeros Naturales", "Contar Dígitos", "Calcular Potencia", "Opción 5"};  // Añadir "Calcular Potencia"
         JComboBox<String> comboBox = new JComboBox<>(opciones);
 
         // Crear un JTextArea para mostrar los números
@@ -39,6 +40,9 @@ public class MAIN extends JFrame {
             } else if (seleccionado.equals("Contar Dígitos")) {
                 int cantidad = ContadorDeDigitos.contarDigitos(12345);
                 textArea.setText("La cantidad de dígitos de 12345 es: " + cantidad);
+            } else if (seleccionado.equals("Calcular Potencia")) {  // Añadir este caso
+                int resultado = Potencia.calcularPotencia(2, 3);
+                textArea.setText("2 elevado a 3 es: " + resultado);
             }
         });
 
