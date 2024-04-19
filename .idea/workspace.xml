@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2a2f119-c79e-41ec-9045-1a831d34d031" name="Changes" comment=".">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Adn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/OrganizacionDocumentos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ADN/Adn.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CONTARDIGITOS/ContadorDeDigitos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HEXADECIMALDECIMAL/HexadecimalADecimal.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MAIN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MAIN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MAXIMO/Maximo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/NumerosNaturales/Numerosnaturales.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/POTENCIA/Potencia.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SumaNumerosN/NumerosN.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +54,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -80,7 +75,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1713534071117</updated>
-      <workItem from="1713534072156" duration="11279000" />
+      <workItem from="1713534072156" duration="11644000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <option name="closed" value="true" />
@@ -218,7 +213,23 @@
       <option name="project" value="LOCAL" />
       <updated>1713557946734</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary=".">
+      <option name="closed" value="true" />
+      <created>1713560377893</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1713560377893</updated>
+    </task>
+    <task id="LOCAL-00019" summary=".">
+      <option name="closed" value="true" />
+      <created>1713560464224</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1713560464224</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
