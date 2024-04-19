@@ -13,11 +13,11 @@ public class Adn {
         for (int i = 0; i < longitud; i++) {
             cadenaADN.append(BASES[random.nextInt(BASES.length)]);
         }
-        // Aseguramos que al menos un gen esté presente en la cadena de ADN
-        int inicioGen = random.nextInt(longitud - 3);
-        cadenaADN.replace(inicioGen, inicioGen + 3, INICIO_GEN);
-        int finGen = random.nextInt(longitud - inicioGen - 3) + inicioGen + 3;
-        cadenaADN.replace(finGen, finGen + 3, FIN_GEN[random.nextInt(FIN_GEN.length)]);
+        // Aseguramos que al menos un gen esté presente en la cadena de ADN cada dos veces
+        for (int i = 0; i < longitud - 6; i += 6) {
+            cadenaADN.replace(i, i + 3, INICIO_GEN);
+            cadenaADN.replace(i + 3, i + 6, FIN_GEN[random.nextInt(FIN_GEN.length)]);
+        }
         return cadenaADN.toString();
     }
 
