@@ -13,12 +13,17 @@ public class MAIN {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JTextArea textArea = new JTextArea();
         JScrollPane scrollPane = new JScrollPane(textArea); // Agregar un scroll pane al JTextArea
-        frame.add(scrollPane);
+        frame.add(scrollPane, BorderLayout.CENTER);
 
         // Crear un JComboBox
         String[] opciones = {"Generar cadena de ADN y contar genes", "Ordenar documentos", "Buscar texto", "Agregar fecha", "Listar fechas"};
         JComboBox<String> comboBox = new JComboBox<>(opciones);
-        frame.add(comboBox, BorderLayout.NORTH);
+
+        // Crear un JPanel con GridBagLayout y agregar el JComboBox
+        JPanel panel = new JPanel(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+        panel.add(comboBox, gbc);
+        frame.add(panel, BorderLayout.NORTH);
 
         // Crear una instancia de GestionFechas
         GestionFechas gestionFechas = new GestionFechas();
