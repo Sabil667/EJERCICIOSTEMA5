@@ -7,6 +7,7 @@ import NumerosNaturales.Numerosnaturales;
 import CONTARDIGITOS.ContadorDeDigitos;
 import POTENCIA.Potencia;
 import MAXIMO.Maximo;
+import HEXADECIMALDECIMAL.HexadecimalADecimal;  // Importar la clase HexadecimalADecimal
 
 public class MAIN extends JFrame {
     JPanel panel;
@@ -18,7 +19,7 @@ public class MAIN extends JFrame {
 
         panel = new JPanel();
 
-        String[] opciones = {"Seleccione una opción", "Suma de Numeros n", "Imprimir Numeros Naturales", "Contar Dígitos", "Calcular Potencia", "Calcular Máximo", "Opción 6"};
+        String[] opciones = {"Seleccione una opción", "Suma de Numeros n", "Imprimir Numeros Naturales", "Contar Dígitos", "Calcular Potencia", "Calcular Máximo", "Convertir Hexadecimal a Decimal", "Opción 7"};  // Añadir "Convertir Hexadecimal a Decimal"
         JComboBox<String> comboBox = new JComboBox<>(opciones);
 
         textArea = new JTextArea(10, 30);
@@ -43,6 +44,10 @@ public class MAIN extends JFrame {
                 int[] vector = {1, 2, 3, 4, 5};
                 String maximo = Maximo.calcularMaximo(vector, 0);
                 textArea.setText(maximo);
+            } else if (seleccionado.equals("Convertir Hexadecimal a Decimal")) {  // Añadir este caso
+                String hex = "A1B2";
+                int decimal = HexadecimalADecimal.convertirHexadecimalADecimal(hex, hex.length());
+                textArea.setText("El valor decimal de " + hex + " es: " + decimal);
             }
         });
 
