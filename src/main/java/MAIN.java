@@ -16,7 +16,7 @@ public class MAIN {
         frame.add(scrollPane, BorderLayout.CENTER);
 
         // Crear un JComboBox
-        String[] opciones = {"Generar cadena de ADN y contar genes", "Ordenar documentos", "Buscar texto", "Agregar fecha", "Listar fechas"};
+        String[] opciones = {"Generar cadena de ADN y contar genes", "Ordenar documentos", "Buscar texto", "Agregar fecha", "Listar fechas", "Sumar naturales"};
         JComboBox<String> comboBox = new JComboBox<>(opciones);
 
         // Crear un JPanel con GridBagLayout y agregar el JComboBox
@@ -68,6 +68,16 @@ public class MAIN {
                         List<String> fechasOrdenadas = gestionFechas.obtenerFechasOrdenadas();
                         for (String fechaOrdenada : fechasOrdenadas) {
                             textArea.append(fechaOrdenada + "\n");
+                        }
+                        break;
+                    case "Sumar naturales":
+                        String numero = JOptionPane.showInputDialog("Introduce un número natural:");
+                        try {
+                            int n = Integer.parseInt(numero);
+                            int suma = SumaNaturales.sumaRecursiva(n);
+                            textArea.append("La suma de los primeros " + n + " números naturales es: " + suma + "\n");
+                        } catch (NumberFormatException ex) {
+                            textArea.append("Por favor, introduce un número natural válido.\n");
                         }
                         break;
                 }
