@@ -1,11 +1,20 @@
+import java.util.Random;
+
 public class HexadecimalADecimal {
-    public static int convertir(String hex, int longitud) {
-        if (longitud == 0) {
-            return 0;
-        } else {
-            char ultimoDigito = hex.charAt(longitud - 1);
-            int valorDecimal = Character.digit(ultimoDigito, 16);
-            return valorDecimal * (int) Math.pow(16, 0) + convertir(hex.substring(0, longitud - 1), longitud - 1);
+    private static final String DIGITOS_HEX = "0123456789ABCDEF";
+
+    public static String generarHexadecimal(int longitud) {
+        Random random = new Random();
+        StringBuilder sb = new StringBuilder(longitud);
+        for (int i = 0; i < longitud; i++) {
+            int indice = random.nextInt(DIGITOS_HEX.length());
+            char digitoHex = DIGITOS_HEX.charAt(indice);
+            sb.append(digitoHex);
         }
+        return sb.toString();
+    }
+
+    public static int convertir(String hex) {
+        return Integer.parseInt(hex, 16);
     }
 }

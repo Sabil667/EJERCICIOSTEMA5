@@ -16,7 +16,7 @@ public class MAIN {
         frame.add(scrollPane, BorderLayout.CENTER);
 
         // Crear un JComboBox
-        String[] opciones = {"Generar cadena de ADN y contar genes", "Ordenar documentos", "Buscar texto", "Agregar fecha", "Listar fechas", "Sumar naturales", "Contar dígitos", "Calcular potencia", "Calcular máximo"};
+        String[] opciones = {"Generar cadena de ADN y contar genes", "Ordenar documentos", "Buscar texto", "Agregar fecha", "Listar fechas", "Sumar naturales", "Contar dígitos", "Calcular potencia", "Calcular máximo", "Convertir hexadecimal a decimal"};
         JComboBox<String> comboBox = new JComboBox<>(opciones);
 
         // Crear un JPanel con GridBagLayout y agregar el JComboBox
@@ -115,6 +115,12 @@ public class MAIN {
                         } catch (NumberFormatException ex) {
                             textArea.append("Por favor, introduce números enteros válidos separados por comas.\n");
                         }
+                        break;
+                    case "Convertir hexadecimal a decimal":
+                        String hexadecimal = HexadecimalADecimal.generarHexadecimal(5); // Genera un número hexadecimal aleatorio de 5 dígitos
+                        int decimal = HexadecimalADecimal.convertir(hexadecimal);
+                        textArea.append("Número hexadecimal generado aleatoriamente: " + hexadecimal + "\n");
+                        textArea.append("El valor decimal del número hexadecimal " + hexadecimal + " es: " + decimal + ".\n");
                         break;
                 }
             }
