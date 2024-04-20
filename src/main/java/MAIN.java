@@ -16,7 +16,7 @@ public class MAIN {
         frame.add(scrollPane, BorderLayout.CENTER);
 
         // Crear un JComboBox
-        String[] opciones = {"Generar cadena de ADN y contar genes", "Ordenar documentos", "Buscar texto", "Agregar fecha", "Listar fechas", "Sumar naturales", "Contar dígitos", "Calcular potencia"};
+        String[] opciones = {"Generar cadena de ADN y contar genes", "Ordenar documentos", "Buscar texto", "Agregar fecha", "Listar fechas", "Sumar naturales", "Contar dígitos", "Calcular potencia", "Calcular máximo"};
         JComboBox<String> comboBox = new JComboBox<>(opciones);
 
         // Crear un JPanel con GridBagLayout y agregar el JComboBox
@@ -100,6 +100,20 @@ public class MAIN {
                             textArea.append("El resultado de " + x + " elevado a " + y + " es: " + resultado + ".\n");
                         } catch (NumberFormatException ex) {
                             textArea.append("Por favor, introduce números enteros válidos.\n");
+                        }
+                        break;
+                    case "Calcular máximo":
+                        String numeros = JOptionPane.showInputDialog("Introduce los números separados por comas:");
+                        try {
+                            String[] numerosSeparados = numeros.split(",");
+                            int[] vector = new int[numerosSeparados.length];
+                            for (int i = 0; i < numerosSeparados.length; i++) {
+                                vector[i] = Integer.parseInt(numerosSeparados[i]);
+                            }
+                            int maximo = MaximoVector.calcularMaximo(vector, 0, vector.length - 1);
+                            textArea.append("El valor máximo en el vector es: " + maximo + ".\n");
+                        } catch (NumberFormatException ex) {
+                            textArea.append("Por favor, introduce números enteros válidos separados por comas.\n");
                         }
                         break;
                 }
