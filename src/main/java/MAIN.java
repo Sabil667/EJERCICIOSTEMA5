@@ -16,7 +16,7 @@ public class MAIN {
         frame.add(scrollPane, BorderLayout.CENTER);
 
         // Crear un JComboBox
-        String[] opciones = {"Generar cadena de ADN y contar genes", "Ordenar documentos", "Buscar texto", "Agregar fecha", "Listar fechas", "Sumar naturales", "Contar dígitos"};
+        String[] opciones = {"Generar cadena de ADN y contar genes", "Ordenar documentos", "Buscar texto", "Agregar fecha", "Listar fechas", "Sumar naturales", "Contar dígitos", "Calcular potencia"};
         JComboBox<String> comboBox = new JComboBox<>(opciones);
 
         // Crear un JPanel con GridBagLayout y agregar el JComboBox
@@ -88,6 +88,18 @@ public class MAIN {
                             textArea.append("El número " + n + " tiene " + cantidadDigitos + " dígitos.\n");
                         } catch (NumberFormatException ex) {
                             textArea.append("Por favor, introduce un número entero válido.\n");
+                        }
+                        break;
+                    case "Calcular potencia":
+                        String base = JOptionPane.showInputDialog("Introduce la base:");
+                        String exponente = JOptionPane.showInputDialog("Introduce el exponente:");
+                        try {
+                            int x = Integer.parseInt(base);
+                            int y = Integer.parseInt(exponente);
+                            int resultado = Potencia.calcularPotencia(x, y);
+                            textArea.append("El resultado de " + x + " elevado a " + y + " es: " + resultado + ".\n");
+                        } catch (NumberFormatException ex) {
+                            textArea.append("Por favor, introduce números enteros válidos.\n");
                         }
                         break;
                 }
