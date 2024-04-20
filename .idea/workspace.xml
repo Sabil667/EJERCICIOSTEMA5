@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2a2f119-c79e-41ec-9045-1a831d34d031" name="Changes" comment=".">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Adn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ejercicios/Adn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BusquedaTexto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ejercicios/BusquedaTexto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ContadorDigitos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ejercicios/ContadorDigitos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GestionFechas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ejercicios/GestionFechas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HexadecimalADecimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ejercicios/HexadecimalADecimal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MAIN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MAIN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MaximoVector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ejercicios/MaximoVector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/OrganizacionDocumentos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ejercicios/OrganizacionDocumentos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Potencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ejercicios/Potencia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SumaNaturales.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ejercicios/SumaNaturales.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,18 +23,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Sabil667"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Sabil667&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Sabil667/EJERCICIOSTEMA5.git",
-    "accountId": "023ba008-5636-40b2-9803-239a6dbb2755"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Sabil667/EJERCICIOSTEMA5.git&quot;,
+    &quot;accountId&quot;: &quot;023ba008-5636-40b2-9803-239a6dbb2755&quot;
   }
+}</component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
 }]]></component>
+  <component name="ProjectId" id="2fMpB4fNoinxzL8zSoqbQI58zGs" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -55,6 +50,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "ToolWindowGitHub Copilot Chat.ShowToolbar": "false",
     "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -87,6 +83,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713534071117</updated>
       <workItem from="1713534072156" duration="16779000" />
+      <workItem from="1713620663737" duration="834000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <option name="closed" value="true" />
