@@ -16,7 +16,7 @@ public class MAIN {
         frame.add(scrollPane, BorderLayout.CENTER);
 
         // Crear un JComboBox
-        String[] opciones = {"Generar cadena de ADN y contar genes", "Ordenar documentos", "Buscar texto", "Agregar fecha", "Listar fechas", "Sumar naturales"};
+        String[] opciones = {"Generar cadena de ADN y contar genes", "Ordenar documentos", "Buscar texto", "Agregar fecha", "Listar fechas", "Sumar naturales", "Contar dígitos"};
         JComboBox<String> comboBox = new JComboBox<>(opciones);
 
         // Crear un JPanel con GridBagLayout y agregar el JComboBox
@@ -78,6 +78,16 @@ public class MAIN {
                             textArea.append("La suma de los primeros " + n + " números naturales es: " + suma + "\n");
                         } catch (NumberFormatException ex) {
                             textArea.append("Por favor, introduce un número natural válido.\n");
+                        }
+                        break;
+                    case "Contar dígitos":
+                        String numeroDigitos = JOptionPane.showInputDialog("Introduce un número entero:");
+                        try {
+                            int n = Integer.parseInt(numeroDigitos);
+                            int cantidadDigitos = ContadorDigitos.contarDigitos(n);
+                            textArea.append("El número " + n + " tiene " + cantidadDigitos + " dígitos.\n");
+                        } catch (NumberFormatException ex) {
+                            textArea.append("Por favor, introduce un número entero válido.\n");
                         }
                         break;
                 }
