@@ -25,7 +25,7 @@ public class MAIN {
         gbc.fill = GridBagConstraints.HORIZONTAL;
 
         // Crear un JComboBox
-        String[] opciones = {"Generar cadena de ADN y contar genes", "Ordenar documentos", "Buscar texto", "Agregar fecha", "Listar fechas", "Sumar naturales", "Contar dígitos", "Calcular potencia", "Calcular máximo", "Convertir hexadecimal a decimal"};
+        String[] opciones = {"Generar cadena de ADN y contar genes", "Ordenar documentos", "Buscar texto", "Agregar fecha", "Listar fechas", "Sumar naturales", "Contar dígitos", "Calcular potencia", "Calcular máximo", "Convertir hexadecimal a decimal", "Calcular combinatorio"};
         JComboBox<String> comboBox = new JComboBox<>(opciones);
         panel.add(comboBox, gbc);
 
@@ -128,6 +128,18 @@ public class MAIN {
                         int decimal = HexadecimalADecimal.convertir(hexadecimal);
                         textArea.append("Número hexadecimal generado aleatoriamente: " + hexadecimal + "\n");
                         textArea.append("El valor decimal del número hexadecimal " + hexadecimal + " es: " + decimal + ".\n");
+                        break;
+                    case "Calcular C":
+                        String nString = JOptionPane.showInputDialog("Introduce el valor de n:");
+                        String kString = JOptionPane.showInputDialog("Introduce el valor de k:");
+                        try {
+                            int n = Integer.parseInt(nString);
+                            int k = Integer.parseInt(kString);
+                            int resultado = CalcularC.calcularCombinatoria(n, k);
+                            textArea.append("El resultado de C(" + n + ", " + k + ") es: " + resultado + ".\n");
+                        } catch (NumberFormatException ex) {
+                            textArea.append("Por favor, introduce números enteros válidos.\n");
+                        }
                         break;
                 }
             }

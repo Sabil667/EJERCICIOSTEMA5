@@ -1,6 +1,6 @@
 package Ejercicios;
 
-public class Combinatoria {
+public class CalcularC {
     public static int calcularCombinatoria(int n, int k) {
         if (k == 0 || k == n) {
             return 1;
