@@ -1,3 +1,5 @@
+package Ejercicios;
+
 public class SumaNaturales {
     public static int sumaRecursiva(int n) {
         if (n <= 1) {

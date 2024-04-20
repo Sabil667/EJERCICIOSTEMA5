@@ -1,3 +1,5 @@
+package Ejercicios;
+
 public class Potencia {
     public static int calcularPotencia(int x, int y) {
         if (y == 0) {

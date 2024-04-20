@@ -1,3 +1,5 @@
+package Ejercicios;
+
 public class ContadorDigitos {
     public static int contarDigitos(int numero) {
         if (numero < 10) {

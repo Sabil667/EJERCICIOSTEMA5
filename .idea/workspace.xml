@@ -6,8 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="b2a2f119-c79e-41ec-9045-1a831d34d031" name="Changes" comment=".">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HexadecimalADecimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HexadecimalADecimal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Adn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ejercicios/Adn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BusquedaTexto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ejercicios/BusquedaTexto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ContadorDigitos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ejercicios/ContadorDigitos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GestionFechas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ejercicios/GestionFechas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HexadecimalADecimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ejercicios/HexadecimalADecimal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MAIN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MAIN.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MaximoVector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ejercicios/MaximoVector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/OrganizacionDocumentos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ejercicios/OrganizacionDocumentos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Potencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ejercicios/Potencia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SumaNaturales.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Ejercicios/SumaNaturales.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +66,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Ejercicios" />
       <recent name="" />
     </key>
   </component>
@@ -77,7 +86,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1713534071117</updated>
-      <workItem from="1713534072156" duration="16095000" />
+      <workItem from="1713534072156" duration="16779000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <option name="closed" value="true" />
@@ -327,7 +336,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713573908735</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary=".">
+      <option name="closed" value="true" />
+      <created>1713574602386</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1713574602386</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

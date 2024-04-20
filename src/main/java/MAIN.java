@@ -1,3 +1,5 @@
+import Ejercicios.*;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -15,15 +17,17 @@ public class MAIN {
         JScrollPane scrollPane = new JScrollPane(textArea); // Agregar un scroll pane al JTextArea
         frame.add(scrollPane, BorderLayout.CENTER);
 
+        // Crear un JPanel con GridBagLayout
+        JPanel panel = new JPanel(new GridBagLayout());
+        frame.add(panel, BorderLayout.NORTH);
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.gridwidth = GridBagConstraints.REMAINDER;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+
         // Crear un JComboBox
         String[] opciones = {"Generar cadena de ADN y contar genes", "Ordenar documentos", "Buscar texto", "Agregar fecha", "Listar fechas", "Sumar naturales", "Contar dígitos", "Calcular potencia", "Calcular máximo", "Convertir hexadecimal a decimal"};
         JComboBox<String> comboBox = new JComboBox<>(opciones);
-
-        // Crear un JPanel con GridBagLayout y agregar el JComboBox
-        JPanel panel = new JPanel(new GridBagLayout());
-        GridBagConstraints gbc = new GridBagConstraints();
         panel.add(comboBox, gbc);
-        frame.add(panel, BorderLayout.NORTH);
 
         // Crear una instancia de GestionFechas
         GestionFechas gestionFechas = new GestionFechas();
@@ -32,6 +36,9 @@ public class MAIN {
         comboBox.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                // Limpiar el JTextArea
+                textArea.setText("");
+
                 String seleccionado = (String) comboBox.getSelectedItem();
                 switch (seleccionado) {
                     case "Generar cadena de ADN y contar genes":

@@ -1,3 +1,5 @@
+package Ejercicios;
+
 import java.util.Random;
 
 public class Adn {

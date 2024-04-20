@@ -1,3 +1,5 @@
+package Ejercicios;
+
 public class MaximoVector {
     public static int calcularMaximo(int[] vector, int inicio, int fin) {
         if (inicio == fin) {
